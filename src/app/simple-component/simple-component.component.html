@@ -1,0 +1,17 @@
+<p>
+  simple-component works!
+</p>
+
+<button (click)="displayDetails = !displayDetails; logEvent();" class="btn btn-success">Display details</button>
+
+<p *ngIf="displayDetails">
+  Secret password is tuna!
+</p>
+
+<hr>
+
+<ul>
+  <li *ngFor="let log of logs; let i = index" [ngStyle]="{'background-color': i >= 5 ? 'blue' : 'inherit'}" [ngClass]="{'white-color': i >= 5}">
+    Time: {{log}} >>-->> index: {{i}}
+  </li>
+</ul>
